@@ -9,11 +9,12 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias db="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias dev="cd ~/Development"
 alias g="git"
+alias ll="ls -lahs"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -44,6 +45,9 @@ alias egrep='egrep --color=auto'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
+
+# Backup entire website
+alias backup="wget --mirror --convert-links --backup-converted --adjust-extension"
 
 # Get week number
 alias week='date +%V'
@@ -146,3 +150,24 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# DNS utils
+alias dns='dig +noall +answer $a any $1'
+alias ns='host -t ns $1'
+alias mx='host -t mx $1'
+
+# Stop after sending count ECHO_REQUEST packets #
+alias ping='ping -c 5'
+
+# Do not wait interval 1 second, go fast #
+alias fastping='ping -c 100 -s.2'
+
+# Recursively delete `.DS_Store` files and ._* files
+alias cleanup="find . -name ".DS_Store" -depth -exec rm {} \; -print && find . -iname '._*' -exec rm -rf {} \; -print"
+
+# Removing empty dirs (leave .svn dirs):
+alias removeempty="find . -depth -type d -empty -not -path '*.svn*' -exec rmdir {} \; -print"
+
+# Merge PDF files, preserving hyperlinks
+# Usage: `mergepdf input{1,2,3}.pdf`
+alias mergepdf='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=_merged.pdf'

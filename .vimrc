@@ -1,7 +1,7 @@
 " Use the Solarized Dark theme
 set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+colorscheme monokai
+"let g:solarized_termtrans=1
 
 " Make Vim more useful
 set nocompatible
@@ -44,13 +44,14 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
+syntax enable
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
-set tabstop=2
+set tabstop=4
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
+"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+"set list
 " Highlight searches
 set hlsearch
 " Ignore case of searches
@@ -60,7 +61,7 @@ set incsearch
 " Always show status line
 set laststatus=2
 " Enable mouse in all modes
-set mouse=a
+set mouse=r
 " Disable error bells
 set noerrorbells
 " Don’t reset cursor to start of line when moving around.
@@ -76,10 +77,10 @@ set title
 " Show the (partial) command as it’s being typed
 set showcmd
 " Use relative line numbers
-if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
-endif
+"if exists("&relativenumber")
+"	set relativenumber
+"	au BufReadPost * set relativenumber
+"endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
