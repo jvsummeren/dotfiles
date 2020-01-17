@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-# Path exports
-export PATH="$HOME/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$NPM_PACKAGES/bin:$PATH"
-export PATH="$PATH:~/.composer/vendor/bin"
-export PATH=/opt/subversion/bin:$PATH
-export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
-
 # Make vim the default editor.
 export EDITOR='vim';
 
@@ -42,8 +34,6 @@ export MANPAGER='less -X';
 export GPG_TTY=$(tty);
 
 # NVM stuff
-export NPM_PACKAGES="/usr/local/npm_packages"
-export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

@@ -46,6 +46,11 @@ alias egrep='egrep --color=auto'
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Modify dotfiles
+alias editdot="cd ~/Development/dotfiles; code .; code .aliases; code .extra; source bootstrap.sh"
+alias updatedot="set -- -f; source ~/Development/dotfiles/bootstrap.sh"
+alias serverdot="cd ~/Development/dotfiles; scp -r .vim/ .bash_profile .bash_prompt .exports .aliases .functions .extra .bashrc .inputrc .vimrc"
+
 # Backup entire website
 alias backup="wget --mirror --convert-links --backup-converted --adjust-extension"
 
@@ -171,3 +176,6 @@ alias removeempty="find . -depth -type d -empty -not -path '*.svn*' -exec rmdir 
 # Merge PDF files, preserving hyperlinks
 # Usage: `mergepdf input{1,2,3}.pdf`
 alias mergepdf='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=_merged.pdf'
+
+# Open files or folders from terminal
+alias phpstorm="~/Dropbox/Symlinked/bash/phpstorm.sh"
