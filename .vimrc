@@ -1,7 +1,6 @@
 " Use the Solarized Dark theme
 set background=dark
-colorscheme monokai
-"let g:solarized_termtrans=1
+colorscheme codedark
 
 " Make Vim more useful
 set nocompatible
