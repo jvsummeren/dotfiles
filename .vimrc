@@ -1,4 +1,4 @@
-" Use the Solarized Dark theme
+" Use the vim-code-dark theme
 set background=dark
 colorscheme codedark
 
@@ -46,11 +46,8 @@ syntax on
 syntax enable
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
+" Make tabs as wide as four spaces
 set tabstop=4
-" Show “invisible” characters
-"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-"set list
 " Highlight searches
 set hlsearch
 " Ignore case of searches
@@ -75,11 +72,6 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
-" Use relative line numbers
-"if exists("&relativenumber")
-"	set relativenumber
-"	au BufReadPost * set relativenumber
-"endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 

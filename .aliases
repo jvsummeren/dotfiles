@@ -13,9 +13,9 @@ alias db="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias dev="cd ~/Development"
+alias dot="cd ~/Development/dotfiles; ll"
 alias g="git"
 alias ll="ls -lahs"
-alias br="broot"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
