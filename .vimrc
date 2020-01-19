@@ -50,6 +50,8 @@ set cursorline
 set tabstop=4
 " Highlight searches
 set hlsearch
+hi Search ctermbg=LightGray
+hi Search ctermfg=DarkBlue
 " Ignore case of searches
 set ignorecase
 " Highlight dynamically as pattern is typed
