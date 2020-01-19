@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
 # Extra path exports
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$NPM_PACKAGES/bin:$PATH"
 export PATH="$PATH:~/.composer/vendor/bin"
+export PATH="/usr/local/sbin:$PATH"
 export PATH=/opt/subversion/bin:$PATH
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
+
+# Node
 export NPM_PACKAGES="/usr/local/npm_packages"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+export PATH="$NPM_PACKAGES/bin:$PATH"
