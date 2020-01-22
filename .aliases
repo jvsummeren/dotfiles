@@ -148,4 +148,4 @@ alias mx='host -t mx $1'
 alias ping='ping -c 5'
 
 # Generate simple password
-alias pw="openssl rand -base64 30"
+alias pw="LC_ALL=C tr -dc 'A-Za-z0-9_!@#$%^&*()\-+=' < /dev/urandom | head -c 32 | xargs"
