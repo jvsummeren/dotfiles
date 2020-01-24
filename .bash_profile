@@ -50,4 +50,4 @@ complete -W "NSGlobalDomain" defaults;
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 # Patch broot
-source ~/Library/Preferences/org.dystroy.broot/launcher/bash/br
+[ -f ~/Library/Preferences/org.dystroy.broot/launcher/bash/br ] && source ~/Library/Preferences/org.dystroy.broot/launcher/bash/br
