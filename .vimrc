@@ -75,6 +75,11 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
+" Use relative line numbers
+if exists("&relativenumber")
+	set relativenumber
+	au BufReadPost * set relativenumber
+endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
@@ -102,6 +107,14 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+" Find trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
