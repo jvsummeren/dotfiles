@@ -1,6 +1,7 @@
-" Use the vim-code-dark theme
-set background=dark
+" Use the Darcula theme - https://github.com/doums/darcula
 colorscheme codedark
+set termguicolors
+let g:lightline = { 'colorscheme': 'darcula' }
 
 " Make Vim more useful
 set nocompatible
@@ -89,6 +90,9 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+" Comment with leader + /
+noremap <leader>/ :Commentary<cr>
+
 " Automatic commands
 if has("autocmd")
 	" Enable file type detection
@@ -98,3 +102,17 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+Plug 'doums/darcula'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+
+" Initialize plugin system
+call plug#end()
