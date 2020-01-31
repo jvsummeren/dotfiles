@@ -1,6 +1,8 @@
 " Use the Darcula theme - https://github.com/doums/darcula
 colorscheme codedark
-set termguicolors
+if has("termguicolors")
+	set termguicolors
+endif
 let g:lightline = { 'colorscheme': 'darcula' }
 
 " Make Vim more useful
