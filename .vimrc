@@ -32,10 +32,8 @@ set directory=~/.vim/swaps
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
-
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
-
 " Respect modeline in files
 set modeline
 set modelines=4
@@ -51,10 +49,6 @@ syntax enable
 set cursorline
 " Make tabs as wide as four spaces
 set tabstop=4
-" Highlight searches
-set hlsearch
-hi Search ctermbg=LightGray
-hi Search ctermfg=DarkBlue
 " Ignore case of searches
 set ignorecase
 " Highlight dynamically as pattern is typed
@@ -84,6 +78,10 @@ if exists("&relativenumber")
 endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
+" Save a file as root (,W)
+noremap <leader>W :w !sudo tee % > /dev/null<CR>
+" Comment with leader + /
+noremap <leader>/ :Commentary<cr>
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
@@ -94,11 +92,6 @@ function! StripWhitespace()
 	call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
-" Save a file as root (,W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
-" Comment with leader + /
-noremap <leader>/ :Commentary<cr>
 
 " Automatic commands
 if has("autocmd")
@@ -110,17 +103,7 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
-" Find trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
+" Initialize plugin system
 call plug#begin('~/.vim/plugged')
 
 Plug 'doums/darcula'
@@ -129,5 +112,10 @@ Plug 'junegunn/fzf'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 
-" Initialize plugin system
 call plug#end()
+
+" Hidden chars
+set list
+set listchars=tab:\→\ ,trail:·,nbsp:░
+set showbreak=↪\
+highlight SpecialKey ctermfg=grey guifg=grey25
