@@ -26,7 +26,10 @@
 
 	# Switch to current develop branch and update it
 	ud = "!f() { git checkout \"1.5\" 2> /dev/null || git checkout \"develop\"; }; f; git p"
-
+	
+	# Undo last commit
+	uncommit = reset HEAD~1 --soft
+	
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
 	branches = branch -a
