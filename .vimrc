@@ -49,8 +49,8 @@ syntax enable
 set cursorline
 " Make tabs as wide as four spaces
 set tabstop=4
-" Indent same width as a tab
 set shiftwidth=4
+set expandtab
 " Ignore case of searches
 set ignorecase
 " Highlight dynamically as pattern is typed
