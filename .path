@@ -6,6 +6,10 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH=/opt/subversion/bin:$PATH
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 
+# PHP
+export PATH="/usr/local/opt/php@7.3/bin:$PATH"
+export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
+
 # Node
 export NPM_PACKAGES="/usr/local/npm_packages"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
