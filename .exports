@@ -3,6 +3,11 @@
 # Make vim the default editor.
 export EDITOR='vim';
 
+# Ruby
+export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;
 # Allow 32³ entries; the default is 1000.
@@ -43,3 +48,8 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # Disable verification of SSL peers
 export PERL_LWP_SSL_VERIFY_HOSTNAME=0
+
+# Wine font smoothing
+export PATH="/Applications/Wine Staging.app/Contents/Resources/wine/bin:$PATH"
+export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
+export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib:/opt/X11/lib:$DYLD_FALLBACK_LIBRARY_PATH"

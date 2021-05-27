@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+alias ll='ls -FGlAhp'
+alias c='clear'
+
+export PS1='[\u@\H \w]$ ' # Preferred prompt for iTerm usage
+export HISTSIZE='32768'; # Increase Bash history size
+export HISTFILESIZE="${HISTSIZE}";
+export HISTCONTROL='ignoreboth'; # Omit duplicates

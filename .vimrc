@@ -41,7 +41,7 @@ set modelines=4
 set exrc
 set secure
 " Enable line numbers
-set number
+"set number
 " Enable syntax highlighting
 syntax on
 syntax enable
@@ -110,9 +110,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'doums/darcula'
 Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-commentary'
+"Plug 'junegunn/fzf'
+"Plug 'scrooloose/nerdtree'
+"Plug 'tpope/vim-commentary'
 
 call plug#end()
 
