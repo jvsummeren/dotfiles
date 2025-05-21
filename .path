@@ -2,3 +2,6 @@
 
 # Node
 export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+
+# Homebrew (Apple Silicon)
+export PATH="/opt/homebrew/bin:$PATH"

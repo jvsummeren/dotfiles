@@ -7,7 +7,6 @@ done
 unset file
 
 # Completion & history
-autoload -Uz compinit && compinit
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -17,8 +16,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Prompt
+[[ -o login ]] || exec zsh -l
 autoload -Uz promptinit && promptinit
-prompt pure  # of powerlevel10k
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' hosts $(awk '/^Host / {for (i=2; i<=NF; i++) if ($i !~ "[*?]") print $i}' ~/.ssh/config)
 
