@@ -3,7 +3,6 @@
 # Apple only stuff
 
 # Shortcuts macOS only
-alias db="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias dev="cd ~/Development"
@@ -41,6 +40,3 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
-
-# Patch broot
-[ -f ~/Library/Preferences/org.dystroy.broot/launcher/bash/br ] && source ~/Library/Preferences/org.dystroy.broot/launcher/bash/br
