@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Node
 export PATH="/opt/homebrew/opt/node@18/bin:$PATH"

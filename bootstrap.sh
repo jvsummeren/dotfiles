@@ -1,19 +1,19 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "${ZSH_SOURCE}")";
 
-git pull origin main;
+git pull origin master;
 
 function doIt() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
-		--exclude ".extra" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
-	source ~/.zshrc;
+
+	echo "Please restart your shell and call 'zimfw init' manually and restart the shell again."
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
