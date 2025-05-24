@@ -13,7 +13,7 @@ function doIt() {
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
 
-	echo "Please restart your shell and call 'zimfw init' manually and restart the shell again."
+	echo "Please restart your shell."
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

@@ -1,3 +1,4 @@
 .extra
 .DS_Store
 .zim/modules/*
+.zim/init.zsh
